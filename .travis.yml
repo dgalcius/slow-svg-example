@@ -1,10 +1,10 @@
 install:
  - source ./support/texlive.sh
 
-cache:
-  directories:
-    - /tmp/texlive
-    - $HOME/.texlive
+#cache:
+#  directories:
+#    - /tmp/texlive
+#    - $HOME/.texlive
 
 script:
  - make 
