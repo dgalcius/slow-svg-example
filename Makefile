@@ -22,9 +22,10 @@ report.htm-x:
 	pages=`ruby lg.rb report.lg`; \
 	echo pages: $$pages > pages.txt;  \
 	dviselect $$pages report.idv images.dvi ; \
-#	dvisvgm --no-fonts --exact --scale=1.1,1.1 --page=1- --output="re%1(p-1)x" images.dvi
-#	rm -f images.dvi
+	dvisvgm --no-fonts --exact --scale=1.1,1.1 --page=1- --output="re%1(p-1)x" images.dvi
+	rm -f images.dvi
 
-svg: images.dvi
+#svg: images.dvi
 	pages=`cat pages.txt`; \
-	echo $$pages
+#	dvisvgm --no-fonts --exact --scale=1.1,1.1 --page=1- --output="re%1(p-1)x" images.dvi 2> /dev/null
+#	dvisvgm --no-fonts --scale=1.1,1.1 --page=1- --output="re%1(p-1)x" images.dvi 
