@@ -3,7 +3,8 @@ default: report.htm
 test-alt: report.htm-x
 
 %.htm: %.tex
-	make4ht --lua -u -c ./nma.cfg  -e ./main.mk4 $< "htm,3,pic-align,notoc*" | tee runtime.log.txt
+#	make4ht --lua -u -c ./nma.cfg  -e ./main.mk4 $< "htm,3,pic-align,notoc*" | tee runtime.log.txt
+	make4ht --lua -u -c ./nma.cfg  -e ./main.mk4 $< "htm,3,pic-align,notoc*" 2>02.log
 
 
 clean:
